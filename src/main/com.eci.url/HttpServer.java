@@ -46,6 +46,8 @@ public static void main(String[] args) throws IOException {
                     "\r\n" +
                     htmlWithForms();
 
+
+
             out.println(outputLine);
 
             out.close();
@@ -54,6 +56,12 @@ public static void main(String[] args) throws IOException {
         }
 
     serverSocket.close();
+    }
+
+    public static String jsonSimple() {
+        return  "HTTP/1.1 200 OK\r\n" +
+                "Content-Type: application/json\r\n" +
+                "{\"Title\":\"Indiana Jones and the Raiders of the Lost Ark\",\"Year\":\"1981\",\"Rated\":\"PG\",\"Released\":\"12 Jun 1981\",\"Runtime\":\"115 min\",\"Genre\":\"Action, Adventure\",\"Director\":\"Steven Spielberg\",\"Writer\":\"Lawrence Kasdan, George Lucas, Philip Kaufman\",\"Actors\":\"Harrison Ford, Karen Allen, Paul Freeman\",\"Plot\":\"Archaeology professor Indiana Jones ventures to seize a biblical artefact known as the Ark of the Covenant. While doing so, he puts up a fight against Renee and a troop of Nazis.\",\"Language\":\"English, German, Hebrew, Spanish, Arabic, Nepali\",\"Country\":\"United States\",\"Awards\":\"Won 4 Oscars. 38 wins & 24 nominations total\",\"Poster\":\"https://m.media-amazon.com/images/M/MV5BNTU2ODkyY2MtMjU1NC00NjE1LWEzYjgtMWQ3MzRhMTE0NDc0XkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_SX300.jpg\",\"Ratings\":[{\"Source\":\"Internet Movie Database\",\"Value\":\"8.4/10\"},{\"Source\":\"Rotten Tomatoes\",\"Value\":\"96%\"},{\"Source\":\"Metacritic\",\"Value\":\"85/100\"}],\"Metascore\":\"85\",\"imdbRating\":\"8.4\",\"imdbVotes\":\"966,972\",\"imdbID\":\"tt0082971\",\"Type\":\"movie\",\"DVD\":\"13 May 2008\",\"BoxOffice\":\"$248,159,971\",\"Production\":\"N/A\",\"Website\":\"N/A\",\"Response\":\"True\"}";
     }
 
     public static String htmlSimple() {
